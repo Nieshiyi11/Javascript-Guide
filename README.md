@@ -23,7 +23,7 @@ Maybe you should have some programming experience before reading...
 
 [**Content**]:
 
-1.) Function-Base：Some bascial knowlage of function, like: function definition/parameter mechanism/return value
+1.) Function-Base：Some basic knowlage of function, like: function definition/parameter mechanism/return value
 
 2.) Function-Closure: One of the most improtant feature of function ———— Closure
 
