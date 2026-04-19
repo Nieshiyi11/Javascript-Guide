@@ -1,4 +1,4 @@
-## ===一个从【函数】开始的Javascript完全指南（Guidbook——JS）===
+## ===一个从【函数】开始的Javascript完全指南（Guidebook——JS）===
 
 【中文】
 
