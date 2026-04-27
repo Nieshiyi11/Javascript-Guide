@@ -1,0 +1,28 @@
+const title = document.querySelector("h1");
+
+// textContent：纯文本（推荐）
+title.textContent = "新标题";
+
+// innerHTML：可以包含HTML标签（注意安全风险）
+title.innerHTML = "新<em>标题</em>";   // "标题"二字会变斜体
+
+// 区别：
+const div = document.querySelector(".box");
+div.innerHTML = "<strong>加粗</strong>";   // 浏览器会解析HTML
+div.textContent = "<strong>加粗</strong>"; // 原样显示，包括标签文字
+
+/*====================================================== 修改样式 ======================================================*/
+const box = document.querySelector(".box");
+
+// 方式1：直接改 style 属性（行内样式）
+box.style.backgroundColor = "red";    // CSS的 background-color → JS用驼峰
+box.style.fontSize = "20px";          // font-size → fontSize
+box.style.border = "2px solid blue";
+box.style.marginTop = "10px";         // margin-top → marginTop
+
+// ⚠️ CSS属性名转JS的规则：
+// 去掉短横线 -，后面的字母大写
+// background-color → backgroundColor
+// font-size        → fontSize
+// border-radius    → borderRadius
+// z-index          → zIndex
