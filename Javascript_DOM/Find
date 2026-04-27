@@ -1,0 +1,15 @@
+// 1. 通过 ID（返回单个元素）
+const title = document.getElementById("main-title");
+
+// 2. 通过类名（返回集合）
+const items = document.getElementsByClassName("item");
+
+// 3. 通过标签名（返回集合）
+const paragraphs = document.getElementsByTagName("p");
+
+// 4. CSS选择器 - 第一个匹配的（最常用！）
+const box = document.querySelector(".box");
+const firstP = document.querySelector("div.box > p");
+
+// 5.  CSS选择器 - 所有匹配的（最常用！）
+const allP = document.querySelectorAll(".box p");
