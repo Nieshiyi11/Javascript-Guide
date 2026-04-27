@@ -87,6 +87,20 @@ console.log(all[1]);     // <p>段落2</p>
 all.forEach(function(p){
     console.log(p.textContent);
 });
+//【复习forEach以及函数基础】
+// 只用一次 → 匿名函数
+// function(p)确实没有赋值给变量，也没有名字。但它被传给了forEach的参数，forEach内部接住了它。
+all.forEach(function(p){
+    console.log(p.textContent);
+});
+// 要在多个地方复用 → 有名字的函数
+function printText(p){
+    console.log(p.textContent);
+}
+all.forEach(printText);
+otherList.forEach(printText);   // 别的地方也能用
+
+
 //如果想用数组方法就：
 const arr = Array.from(document.querySelectorAll("p"));
 //或者：
