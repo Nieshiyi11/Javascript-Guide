@@ -1,28 +1,50 @@
+/*==================================================== textContent VS innerHTML ====================================================*/
 const title = document.querySelector("h1");
-
-// textContent：纯文本（推荐）
+//1.
+// textContent：纯文本
+// textContent: 如果写了HTML标签进去，它会原样显示，不会被解析
 title.textContent = "新标题";
+title.textContent = "<strong>新标题加粗</strong>";// 页面上显示: <strong>加粗</strong> 此时标签当成普通文字了！！
 
+//2.
 // innerHTML：可以包含HTML标签（注意安全风险）
-title.innerHTML = "新<em>标题</em>";   // "标题"二字会变斜体
+title.innerHTML = "<strong>新标题加粗</strong>";
+// 页面上显示: 新标题加粗（文本真的变粗了，因为浏览器解析了HTML标签）
 
-// 区别：
-const div = document.querySelector(".box");
-div.innerHTML = "<strong>加粗</strong>";   // 浏览器会解析HTML
-div.textContent = "<strong>加粗</strong>"; // 原样显示，包括标签文字
+
+/*==================================================== textContent VS innerText ====================================================*/
+/*
+HTML:
+<div id="box">
+    <p>可见文字</p>
+    <p style="display:none">隐藏文字</p>
+</div>
+*/
+const box = document.querySelector("#box");
+console.log(box.textContent);  // "可见文字 隐藏文字" ← 全都拿到
+console.log(box.innerText);    // "可见文字"         ← 只拿可见的
+// textContent不管元素是否隐藏，全部返回
+// innerText只返回页面上看得到的文字
+
 
 /*====================================================== 修改样式 ======================================================*/
 const box = document.querySelector(".box");
-
-// 方式1：直接改 style 属性（行内样式）
-box.style.backgroundColor = "red";    // CSS的 background-color → JS用驼峰
-box.style.fontSize = "20px";          // font-size → fontSize
+// 方式1：直接改style属性【行内样式】
+box.style.backgroundColor = "red";    // 修改CSS的background-color为红色
+box.style.fontSize = "20px";
 box.style.border = "2px solid blue";
-box.style.marginTop = "10px";         // margin-top → marginTop
-
-// ⚠️ CSS属性名转JS的规则：
-// 去掉短横线 -，后面的字母大写
+box.style.marginTop = "10px"; 
+box.style.backgroundColor = "";      // 设为空字符串=清除，恢复CSS文件里的样式
+// 【CSS属性名转JS的规则】如下：
+// 去掉短横线- + 后面的字母大写
 // background-color → backgroundColor
 // font-size        → fontSize
 // border-radius    → borderRadius
 // z-index          → zIndex
+//Eg:
+const p = document.querySelector("#msg");
+// 读取
+console.log(p.textContent);   // "旧文字"
+// 修改
+p.textContent = "新文字";      // 页面上立刻变成"新文字"
+p.textContent = "<strong>加粗</strong>";// 页面上显示: <strong>加粗</strong> ← 标签当成普通文字了
