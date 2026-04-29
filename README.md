@@ -1,4 +1,4 @@
-## ===一个从【函数】开始的Javascript完全指南（Guidebook——JS）===
+## ===一个从【函数】开始的Javascript完全指南（Guidebook about Javascript for Beginners）===
 
 【中文】
 
@@ -6,7 +6,7 @@
 
 【**目录**】：
 
-### Part1.Function ###
+### Part1.Function
 
 1.) Function-Base：涵盖了函数的基础知识：定义方式/参数机制/返回值
 
@@ -14,7 +14,7 @@
 
 3.)Function-HOF：讲解了高阶函数（Higer-Order-Function）的相关知识点。特别是数组的reduce/forEach/map/filter
 
-### Part2.DOM ###
+### Part2.DOM
 
 1.) Find：查找元素
 
@@ -34,7 +34,7 @@ Maybe you should have some programming experience before reading...
 
 [**Content**]:
 
-### Part1.Function ###
+### Part1.Function
 
 1.) Function-Base：Some basic knowlage of function, like: function definition/parameter mechanism/return value
 
@@ -42,7 +42,7 @@ Maybe you should have some programming experience before reading...
 
 3.) Function-HOF：Something about Higer-Order-Function. Especially array's reduce/forEach/map/filter and so on...
 
-### Part2.DOM ###
+### Part2.DOM
 
 1.) Find：Finding elements
 
