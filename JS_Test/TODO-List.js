@@ -33,28 +33,37 @@ function render(){
   list.innerHTML = "";   // 清空列表（防止重复渲染）
   todos.forEach(function(todo, index){
     const li = document.createElement("li");
-    if (todo.done){
+    if(todo.done){  //如果完成：加一个CSS类（比如变灰 / 删除线）
         li.classList.add("done");
     }
     li.innerHTML = `
       <span>${todo.text}</span>
       <button class="delete" data-index="${index}">删除</button>
     `;
-
-    list.appendChild(li);
+    list.appendChild(li);  // 插入到页面
   });
 }
+/*
+【渲染内容】：
+文本：todo.text
+删除按钮
+data-index：存当前索引（非常关键！！）
+为什么要 data-index？ → 用来知道“删的是哪一项”
+*/
+
+
+
 
 // ========================================== 添加 ==========================================
 addBtn.addEventListener("click", function(){
-  const text = input.value.trim();
+  const text = input.value.trim();   // 获取输入内容 + 去空格
   if(!text){
     return;
   }
   todos.push({ text, done: false });
-  saveTodos();
-  render();
-  input.value = "";
+  saveTodos();  // 存数据
+  render();     // 渲染UI 
+  input.value = "";  // 清空输入框
 });
 
 // ========================================== 点击事件（委托） ====================================

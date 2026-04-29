@@ -10,7 +10,7 @@ title.textContent = "<strong>新标题加粗</strong>";// 页面上显示: <stro
 // innerHTML：可以包含HTML标签（注意安全风险）
 title.innerHTML = "<strong>新标题加粗</strong>";
 // 页面上显示: 新标题加粗（文本真的变粗了，因为浏览器解析了HTML标签）
-title.innerHTML = ""; //表示清空元素，一般用于渲染防止重复渲染
+title.innerHTML = ""; //表示清空元素，一般用于渲染防止重复渲染 + 清空输入框
 
 
 /*==================================================== textContent VS innerText ====================================================*/
