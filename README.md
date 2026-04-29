@@ -46,7 +46,7 @@ Maybe you should have some programming experience before reading...
 
 1.) Find：Finding elements
 
-2.) Modify：Modifying the CSS style of elements (NOTICE:Events'relevant knowledge is also included)
+2.) Modify：Modifying the CSS style of elements (*NOTICE*:Events'relevant knowledge is also included)
 
 3.) Others：Other operations（creat/insert/remove elements）
 
