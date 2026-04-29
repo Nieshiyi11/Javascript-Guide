@@ -41,10 +41,3 @@ box.style.backgroundColor = "";      // 设为空字符串=清除，恢复CSS文
 // font-size        → fontSize
 // border-radius    → borderRadius
 // z-index          → zIndex
-//Eg:
-const p = document.querySelector("#msg");
-// 读取
-console.log(p.textContent);   // "旧文字"
-// 修改
-p.textContent = "新文字";      // 页面上立刻变成"新文字"
-p.textContent = "<strong>加粗</strong>";// 页面上显示: <strong>加粗</strong> ← 标签当成普通文字了
