@@ -62,3 +62,54 @@ btn1.addEventListener("click", function(){  //点击按钮一次：加active 有
   box.classList.toggle("active");
 });
 
+
+/*====================================================== 事件Events ======================================================*/
+/*
+点击 ：click
+鼠标移入 ：mouseover
+输入 ：input
+按键 ：keydown
+*/
+
+//1. 【绑定事件】
+//给按钮绑定一个“点击事件”
+const btn2 = document.querySelector("#btn");
+btn2.addEventListener("click", function(){
+  console.log("点击了");
+});
+
+//2. 【事件对象】
+//event是浏览器自动传进来的参数 是浏览器生成的“事件信息对象”
+btn.addEventListener("click", function(event){
+  console.log(event);
+});
+//当你点击按钮时，浏览器内部会做：
+/*
+创建一个对象 = {
+  点击位置,
+  点击的元素,
+  鼠标信息,
+  时间,
+  ...
+}
+然后把这个对象传给函数function(event){}
+
+如果console.log(event);可能会看到：
+{
+  type: "click",
+  target: button,
+  clientX: 123,
+  clientY: 456,
+  ...
+}
+这就是“事件对象”
+*/
+
+/*
+event有几个重要的属性：
+event.target / event.type / 鼠标位置 / ...
+事件委托（必须用target）
+表单处理
+拖拽
+游戏输入（键盘/鼠标）
+*/
