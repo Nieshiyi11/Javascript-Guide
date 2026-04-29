@@ -1,5 +1,5 @@
-const btn = document.getElementById("toggleBtn");
-const menu = document.getElementById("menu");
+const btn = document.querySelector(".toggleBtn");
+const menu = document.querySelector(".menu");
 btn.addEventListener("click", function(){
   menu.classList.toggle("open");
 });
