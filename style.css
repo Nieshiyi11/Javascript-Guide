@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.menu{
+  width: 200px;
+  background: #f0f0f0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* 展开状态 */
+.menu.open{
+  max-height: 200px;
+  opacity: 1;
+}

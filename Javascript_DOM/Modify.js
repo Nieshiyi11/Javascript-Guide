@@ -41,3 +41,24 @@ box.style.backgroundColor = "";      // 设为空字符串=清除，恢复CSS文
 // font-size        → fontSize
 // border-radius    → borderRadius
 // z-index          → zIndex
+
+//操作HTML元素的class（类名）
+box.classList.add("active");  // 添加类 【用途】：开启某个状态
+box.classList.remove("active"); // 移除类 【用途】：关闭某个状态
+box.classList.toggle("active"); // 切换 【用途】：开关效果
+//toggle等价于if-else语句
+/*
+if (box有active){
+  删除
+}else{
+  添加
+}
+*/
+
+//点击按钮切换状态：
+//【在Test.js里有我的小练习 ———— 下拉菜单】
+const btn1 = document.querySelector("#btn");
+btn1.addEventListener("click", function(){  //点击按钮一次：加active 有效果 ; 再点一次：去除active 效果消失
+  box.classList.toggle("active");
+});
+
